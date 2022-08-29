@@ -1,0 +1,732 @@
+@charset "UTF-8";
+
+/* #################### 메인 슬라이더 PC #################### */
+.main_slider .swiper-container {
+  height: 100vh;
+}
+.main_slider .main_slide1 { background: url(../images/nmain_01.jpg) no-repeat 50% 50% / cover; }
+.main_slider .main_slide2 { background: url(../images/nmain_02.jpg) no-repeat 50% 50% / cover; }
+.main_slider .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom: 55px; }
+
+.main_slider .inner { position: relative; }
+
+/* 슬라이더 애니메이션 */
+.main_slider .main_slide1 .circle_wrap {
+  position: absolute;
+  width: 400px;
+  left: 0px;
+  bottom: 300px;
+}
+/* 모든원의 이동거리는 같고 딜레이타임만 다르게 처리 */
+@keyframes circle {
+  0% {
+      opacity: 0.6;
+  }
+  100% {
+      transform: translateY(-450px);
+      opacity: 0;
+  }
+}
+.main_slider .main_slide1 .circle_wrap [class^=circle] {
+  animation: circle 6s infinite cubic-bezier(0.29, 0.27, 0.74, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: #e8e8e9;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+.main_slider .main_slide1 .circle_wrap .circle2 {
+  left: 500px;
+  bottom: -180px;
+  width: 90px;
+  height: 90px;
+  background: #352214;
+  opacity: 0.4;
+  animation-delay: 0.6s;
+  filter: blur(2px);
+}
+.main_slider .main_slide1 .circle_wrap .circle3 {
+  box-shadow: 0 10px 20px rgb(225, 125, 10);
+  left: 30px;
+  bottom: 290px;
+  width: 25px;
+  height: 25px;
+  background: #e8e8e9;
+  /* opacity: 1; */
+  animation-delay: 0.4s;
+}
+.main_slider .main_slide1 .circle_wrap .circle4 {
+  left: 600px;
+  bottom: 200px;
+  width: 90px;
+  height: 90px;
+  background: #352214;
+  opacity: 0.4;
+  animation-delay: 0s;
+  filter: blur(6px);
+}
+.main_slider .main_slide1 .circle_wrap .circle5 {
+  box-shadow: 0 10px 50px rgb(225, 125, 10);
+  left: 257px;
+  bottom: 278px;
+  width: 24px;
+  height: 24px;
+  background: #ece9ec;
+  opacity: 1;
+  animation-delay: 1.6s;
+}
+
+
+.main_slider .main_slide2 .circle_wrap {
+  width: 400px;
+  /* border: 5px solid red; */
+  position: absolute;
+  right: 0px;
+  bottom: 300px;
+}
+.main_slider .main_slide2 .circle_wrap [class^=circle] {
+  animation: moveCircle 6s infinite cubic-bezier(0.29, 0.27, 0.74, 0.76);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: #e8e8e9;
+  filter: blur(2px);
+  opacity: 0.2;
+  border-radius: 50%;
+}
+.main_slider .main_slide2 .circle_wrap .circle1 {
+  right: -200px;
+  bottom: -280px;
+  width: 250px;
+  height: 250px;
+  background: #221a15;
+  opacity: 0.8;
+  animation-delay: 0.4s;
+  filter: blur(18px);
+}
+.main_slider .main_slide2 .circle_wrap .circle2 {
+  right: 400px;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background: #525121;
+  opacity: 0;
+  animation-delay: 2.4s;
+  filter: blur(10px);
+}
+.main_slider .main_slide2 .circle_wrap .circle3 {
+  right: 30px;
+  bottom: 230px;
+  width: 210px;
+  height: 210px;
+  background: #88856e;
+  opacity: 0.4;
+  animation-delay: 0.2s;
+  filter: blur(8px);
+}
+
+
+
+
+.main_slider .inner {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1260px;
+  padding: 30px;
+  /* border: 4px solid yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main_slider .txt_wrap {
+  text-align: center;
+  z-index: 1;
+}
+.main_slider .txt_wrap strong {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  color: #F27329;
+  font-size: 6rem;
+}
+.main_slider .txt_wrap span {
+  font-size: 3rem;
+  color: #fff;
+}
+.main_slider .txt_wrap em {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 100;
+  font-size: 6rem;
+  color: #fff;
+}
+.main_slider .txt {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 30px;
+  color: #fff;
+}
+.main_slider .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
+  background: #F27329;
+  margin: 0 8px;
+}
+
+/* #################### 어바웃 PC #################### */
+.main_about {
+  padding: 100px 0;
+  background: #F2F2F2;
+}
+.main_about h2 { text-align: center; }
+.main_about .txt {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+.main_about .about {
+  max-width: 1260px;
+  margin: 0 auto ;
+  padding: 0 30px;
+}
+.main_about .about ul {
+  display: flex;
+}
+.main_about .about li {
+  width: calc(100% / 5);
+  /* height: 275px; */
+  text-align: center;
+  display: flex;
+  transition: box-shadow 0.4s;
+}
+.main_about .about a {
+  width: 100%;
+  padding: 30px;
+}
+.main_about .about img { width: 70px; }
+.main_about .about strong { display: block; font-size: 2.4rem; color: #333; font-weight: 700; margin: 20px 0;}
+.main_about .about p { font-size: 1.6rem; font-weight: 500; }
+
+
+/* #################### 비지니스 PC #################### */
+.main_business { position: relative; }
+
+
+.main_business:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #1c1c1c;
+  width: 50%;
+  height: 100%;
+}
+/* .main_business .left_back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #1c1c1c;
+  width: 42%;
+  height: 900px;
+} */
+.main_business .swiper-container { padding: 100px 0; }
+
+.main_business .slide_area {
+  max-width: 1260px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.main_business .slide_area .img_wrap {
+  width: 53.33%;
+  box-shadow: 0 6px 18px rgb(0, 0, 0, 0.4);
+}
+.main_business .slide_area .img_wrap img { width: 100%; }
+
+.main_business .slide_area .txt_area {
+  width: 48.58%;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 126px;
+}
+
+.main_business .slide_area .tit_wrap p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.main_business .slide_area .tit_wrap em {
+  font-weight: 100;
+  color: #222222;
+}
+.main_business .slide_area .tit_wrap strong {font-weight: 700;}
+.main_business .slide_area .tit_wrap strong, .main_business .slide_area .tit_wrap em {
+  font-family: 'Barlow', sans-serif;
+  font-size: 6rem;
+}
+
+.main_business .slide_area .txt_wrap p {
+  margin-bottom: 57px;
+  /* line-height: 1.5; */
+}
+.main_business .slide_area .txt_wrap strong {
+  display: block;
+  font-size: 4.2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.main_business .slide_area .txt_wrap em { display: block; font-size: 3.5rem; margin-top: 20px;}
+.main_business .slide_area .btn_more a {
+  display: inline-block;
+  line-height: 60px;
+  padding: 0 45px;
+  background: #fff;
+  border:1px solid #B0B0B0 ;
+  /* all로하면 창 이동시 시간에 맞춰움직임 */
+  /* transition: background 0.4s;
+  transition: border 0.4s; */
+  letter-spacing: 0.5rem;
+  color: #333;
+  /* transition: background-color 0.4s;
+  transition: border 0.4s; */
+  transition: all 0.4s;
+}
+.main_business .slide_area .btn_more a:hover {
+  /* border: 1px solid #fff; */
+  background: #FF6600;
+  color: #fff;
+  border: 1px solid #FF6600;
+}
+
+.main_business .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom: 35px;}
+.main_business .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {width: 15px; height: 15px; background: #F27329; }
+
+
+/* #################### 공지 PC #################### */
+.main_notice {
+  height: auto;
+  background: url(../images/notice_01.jpg) no-repeat center;
+}
+.main_notice h2 { font-size: 6rem; color: #fff; font-weight: 700;}
+.main_notice .txt { font-size: 1.8rem; color: #fff;}
+
+.main_notice .inner {
+  max-width: 1260px;
+  /* height: auto; */
+  margin: 0 auto;
+  /* border: 2px solid red; */
+  padding: 100px 30px ;
+}
+.main_notice .inner>p { margin: 30px 0 ;}
+.main_notice .tab_menu {
+  display: flex;
+  margin-bottom: 20px;
+}
+.main_notice .tab_menu li { border: 1px solid #fff; transition: background-color 0.4s; }
+.main_notice .tab_menu li:hover { background: #fff; }
+.main_notice .tab_menu li:hover a { color: #333;}
+.main_notice .tab_menu li.active { background: #fff; }
+
+.main_notice .tab_menu li a {
+  display: block;
+  padding: 0 70px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+.main_notice .tab_menu li.active a { color: #333; }
+
+.main_notice .notice_list_wrap { display: none; }
+.main_notice .notice_list_wrap.on {display: block;}
+.main_notice .list_wrap {
+  display: flex;
+}
+.main_notice .list_wrap li {
+  /* padding: 50px 30px; */
+  background: #f5f5f5;
+  width: calc(1200px / 4);
+  /* height: 400px; */
+  transition: background-color 0.4s;
+}
+.main_notice .list_wrap li:not(:nth-child(1)) { border-left: 1px solid #ddd; }
+.main_notice .list_wrap li:hover {
+  background: #146173;
+  color: #fff;
+}
+.main_notice .list_wrap li:hover strong,
+.main_notice .list_wrap li:hover p,
+.main_notice .list_wrap li:hover span { color: #fff; }
+
+.main_notice .list_wrap a { display: block; padding: 50px 30px;}
+.main_notice .list_wrap strong {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  /* white-space: normal; */
+
+  /* IE11대응 */
+  /* 4줄일경우 높이가 150px 이기에 150줌.. max-height로 주면 높이가 작아져도 적용됨 */
+  max-height: 150px;
+}
+.main_notice .list_wrap p {
+  margin: 20px 0;
+  font-size: 1.6rem;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 90px;
+}
+.main_notice .list_wrap span {
+  display: block;
+  font-size: 1.4rem;
+  color: #666;
+}
+
+
+/* #################### 커리어 PC #################### */
+.main_careers {
+  padding-bottom: 100px;
+  /* height: 639px; */
+  overflow: hidden;
+}
+.main_careers .inner {
+  /* background: url(../images/career_01.jpg) no-repeat 497px 50%; */
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  height: 639px;
+}
+.main_careers .left_area {
+  padding-right: 50px;
+  width: 497px;
+  /* 스크롤 제거 , 부모에 overflow: hidden 도 같이*/
+  flex-shrink: 0;
+}
+.main_careers .left_area p {
+  margin: 40px 0 60px;
+  line-height: 1.5;
+}
+.main_careers .btn_more {
+  display: flex;
+  justify-content: center;
+}
+.main_careers .btn_more a {
+  border: 1px solid #B0B0B0 ;
+  padding: 0 70px;
+  line-height: 60px;
+  color: #333;
+  letter-spacing: 0.2rem;
+  transition: all 0.4s;
+}
+.main_careers .btn_more a:hover {
+  background: #FF6600;
+  color: #fff;
+  border: 1px solid #FF6600;
+}
+.main_careers .btn_more a:last-child {
+  border-left: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿 분기점 1200 */
+@media (max-width: 1200px) {
+  /* 내용은 rem or px */
+
+  /* #################### 메인 슬라이더 태블릿 #################### */
+  .main_slider .swiper-container { height: 720px; }
+
+  .main_slider .inner {justify-content: center;}
+  .main_slider .txt_wrap strong {font-size: 4.5rem;}
+  .main_slider .txt_wrap em {font-size: 4.5rem;}
+  .main_slider .txt_wrap span {font-size: 3rem;}
+  .main_slider .txt {font-size: 2.6rem;}
+  .main_slider .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom: 10px;}
+
+  /* 애니메이션 태블릿 */
+  .main_slider .main_slide1 .circle_wrap { width: 10px; height: 10px;}
+  .main_slider .main_slide1 .circle_wrap .circle1 {left: 150px; filter: blur(2px); animation-delay: 1.8s;}
+  .main_slider .main_slide1 .circle_wrap .circle2 {width: 45px; height: 45px; left: 600px; background: #18110b;}
+  .main_slider .main_slide1 .circle_wrap .circle3 {width: 17px; height: 17px; left: 100px;}
+  .main_slider .main_slide1 .circle_wrap .circle4 {width: 33px; height: 33px; left: 500px; }
+  .main_slider .main_slide1 .circle_wrap .circle5 {width: 12px; height: 12px; left: 220px;
+  bottom: 80px; border: 10px}
+
+  .main_slider .main_slide2 .circle_wrap .circle1 { width: 200px; height: 200px; filter: blur(18px); right: 10px;}
+  .main_slider .main_slide2 .circle_wrap .circle2 { width: 80px; height: 80px; filter: blur(6px) }
+  .main_slider .main_slide2 .circle_wrap .circle3 { width: 100px; height: 100px; bottom: 100px; right: 90px;}
+
+  /* #################### 어바웃 태블릿 #################### */
+  .main_about {padding: 50px 0; }
+  /* .main_about h2 { font-size: 7.81vw;} */
+  .main_about .about ul {
+    display:flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    padding: 20px 15px 0;
+  }
+
+  .main_about .about li {
+    background: #fff;
+    /* box-shadow: none; */
+    width: calc(50% - 30px);
+    margin:0 15px 30px;
+  }
+
+
+  /* #################### 비지니스 태블릿 #################### */
+  .main_business .left_back { height: 700px; }
+  /* .main_business .txt_area { height: 700px; } */
+  .main_business .slide_area .tit_wrap p { display: none; }
+  .main_business .slide_area .txt_wrap strong { font-size: 3rem; margin-top: 15px;}
+  .main_business .slide_area .tit_wrap strong, .main_business .slide_area .tit_wrap em {font-size: 4rem;}
+  .main_business .slide_area .txt_wrap p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+  .main_business .slide_area .txt_area { padding-left: 30px;}
+  .main_business .slide_area .txt_wrap em { display: none;}
+  .main_business .slide_area .btn_more a {line-height: 40px; padding: 0 10px; font-size: 1.4rem;}
+
+  .main_business .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom: 40px;}
+  .main_business .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {width: 10px; height: 10px; background: #F27329;}
+
+
+  /* #################### 공지 태블릿 #################### */
+  .main_notice { background-position: 0 0; }
+  .main_notice h2 {text-align: center;}
+  .main_notice .inner {
+    padding: 50px 30px;
+  }
+  .main_notice .inner>p {text-align: center;}
+
+  .main_notice .tab_menu {margin-bottom: 30px;}
+  .main_notice .tab_menu li { width: calc(100% / 2); border: 1px solid #fff; }
+  .main_notice .tab_menu li.active { background: #fff }
+  .main_notice .tab_menu li a {
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .main_notice .list_wrap {
+    display: block;
+  }
+  .main_notice .list_wrap li {
+    width: 100%;
+    border: none;
+  }
+  .main_notice .list_wrap li:not(:nth-child(1)) { border: none; }
+  .main_notice .list_wrap li:nth-child(n) {
+    border-bottom: 1px solid #B0B0B0;
+  }
+  .main_notice .list_wrap strong {
+    max-height: 32px;
+    font-size: 2.2rem;
+    -webkit-line-clamp: 1;
+  }
+  .main_notice .list_wrap p {
+    max-height: 42px;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+  }
+
+
+  /* #################### 커리어 태블릿 #################### */
+  .main_careers .inner img { display: none;}
+  .main_careers .inner {
+    height: auto;
+    margin: 0 auto;
+  }
+  .main_careers .left_area {
+    text-align: center;
+  }
+  .main_careers .left_area {
+    padding-right: 0;
+    width: 100%;
+  }
+  .main_careers .btn_more {
+    justify-content: center;
+  }
+  .main_careers .btn_more a {
+    line-height: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########## 요소별 분기점 추가 ########## */
+
+/* main_about PC, 테블릿에서만 호버시 그림자 표시, 모바일에서 호버 X */
+@media (min-width: 768px) {
+  .main_about .about li:hover {
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 모바일 분기점 767 */
+@media (max-width: 767px) {
+
+  /* #################### 메인 슬라이더 모바일 #################### */
+  .main_slider .swiper-container { height: 360px; }
+  .main_slider .txt_wrap strong {font-size: 4rem;}
+  .main_slider .txt_wrap em {font-size: 4rem;}
+  .main_slider .txt_wrap span {font-size: 2.5rem;}
+  .main_slider .txt {font-size: 2rem;}
+
+  .main_slider .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { height: 10px; width: 10px;}
+  /* 애니메이션 모바일*/
+  .main_slider .circle_wrap {display: none;}
+
+  /* 어바웃 모바일 */
+  .main_about .txt {font-size: 1.5rem; margin: 15px 0;}
+  .main_about .about {padding: 0 7.5px; }
+  /* .main_about .about li { width: auto; } */
+  .main_about .about li { margin: 0 7.5px 15px; }
+  .main_about .about li {
+    /* border: 1px solid rebeccapurple; */
+    background: #fff;
+    width: calc(50% - 15px);
+    /* width: 100%; */
+  }
+  .main_about .about ul { margin: 0; padding: 0;}
+  .main_about .about strong {font-size: 1.7rem;}
+  .main_about .about p { font-size: 1.4rem; }
+  .main_about .about img { width: 50px; margin-top: 0; }
+
+
+  /* #################### 비지니스 슬라이더 모바일 #################### */
+  .main_business:before { display: none;}
+  .main_business .swiper-container {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  .main_business .slide_area {
+    flex-wrap: wrap;
+    padding: 0 ;
+    position: relative;
+    padding-bottom: 200px;
+  }
+  .main_business .slide_area .img_wrap {
+    width: 100%;
+  }
+  /* .main_business .slide_area .img_wrap {width: 100vh;} */
+  .main_business .slide_area .txt_area {
+    background: #fff;
+    box-shadow: 0 3px 9px rgb(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    padding: 15px 15px 60px;
+    text-align: center;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    width: auto;
+  }
+  
+  
+  .main_business .slide_area .txt_wrap strong { margin: 15px 0; font-size: 2.5rem; }
+  .main_business .slide_area .txt_wrap p { margin-bottom: 20px;}
+  .main_business .slide_area .btn_more a {
+    line-height: 40px;
+    padding: 0 45px;
+    font-size: 1.5rem;
+  }
+  .main_business .slide_area .tit_wrap em {font-size: 3.1rem;}
+  
+  .main_business .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction { bottom: 70px;}
+
+
+  /* #################### 공지 모바일 #################### */
+  .main_notice .inner {padding: 20px 15px 50px;}
+  .main_notice .inner h2 { color: #fff; font-weight: 700;}
+  .main_notice .inner>p { margin: 15px 0; font-size: 1.5rem;}
+  .main_notice .txt { font-size: 1.8rem; color: #fff; }
+  .main_notice .tab_menu {margin-bottom: 15px;}
+  .main_notice .list_wrap strong { font-size: 1.8rem;}
+  .main_notice .list_wrap p {margin: 10px 0;}
+
+
+  /* #################### 커리어 모바일 #################### */
+  .main_careers {padding-bottom: 50px;}
+  .main_careers .inner { padding: 0 15px;}
+  .main_careers .left_area p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 96px;
+  }
+  .main_careers .btn_more a { font-size: 1.4rem; padding: 0 40px;}
+}
