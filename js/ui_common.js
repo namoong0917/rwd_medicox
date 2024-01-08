@@ -1,4 +1,5 @@
 $(function () {
+  console.log('소스 보기 - https://github.com/namoong0917/rwd_medicox')
   // 함수안에서 사용하는 변수는 함수호출위에서 대입해야함
 
   // PC gnb
